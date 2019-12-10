@@ -1,6 +1,7 @@
-import { shape, string, number } from 'prop-types';
+import { shape, number, string, oneOf } from 'prop-types';
 
-export default shape({
+export const Pug = shape({
   name: string,
-  cutness: number
+  type: oneOf(['black', 'white']),
+  age: number
 });

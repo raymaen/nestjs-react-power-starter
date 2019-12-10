@@ -1,1 +1,1 @@
-export { default as Pug } from './pug.model';
+export { Pug } from './pug.model';
