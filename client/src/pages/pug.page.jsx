@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Pug } from '../model';
+import { getPugs } from '../actions/pugs.actions';
 
 const useStyles = makeStyles({
   card: {
@@ -28,8 +29,12 @@ const useStyles = makeStyles({
   }
 });
 
-const PugPage = ({ pugs }) => {
+const PugPage = ({ pugs, getPugs }) => {
   const classes = useStyles();
+
+  useEffect(() => {
+    getPugs();
+  }, []);
 
   if (!pugs) {
     return <Loading />;
@@ -73,4 +78,4 @@ PugPage.propTypes = {
   pugs: PropTypes.arrayOf(Pug).isRequired
 };
 
-export default connect(mapStateToProps)(PugPage);
+export default connect(mapStateToProps, { getPugs })(PugPage);

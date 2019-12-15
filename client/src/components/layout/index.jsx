@@ -7,7 +7,6 @@ export default function index({ children }) {
   return (
     <Fragment>
       <Header />
-      <Nav />
       {children}
       <Footer />
     </Fragment>

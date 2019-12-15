@@ -1,1 +1,1 @@
-export { default as PugService } from './pugs.service';
+export { PugService } from './pugs.service';

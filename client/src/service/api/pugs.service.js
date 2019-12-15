@@ -1,8 +1,8 @@
-import { ServiceClass } from './ServiceClass';
+import { ApiService } from './api.service';
 
-class pugService extends ServiceClass {
+class pugService extends ApiService {
   constructor() {
-    super();
+    super('/api/pugs');
   }
 
   async getPugs() {

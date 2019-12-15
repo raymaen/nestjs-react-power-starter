@@ -5,6 +5,7 @@ import Layout from './layout';
 import Routes from '../routes';
 import store from '../store';
 import theme from '../theme';
+import 'react-redux-notify/dist/ReactReduxNotify.css';
 
 const App = () => {
   return (
