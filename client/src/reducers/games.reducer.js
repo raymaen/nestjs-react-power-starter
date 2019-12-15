@@ -1,10 +1,10 @@
-import { SET_PUGS } from '../actions/types';
+import { GET_GAMES } from '../actions/types';
 
 const initialState = [];
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case SET_PUGS:
+    case GET_GAMES:
       return action.payload;
     default:
       return state;

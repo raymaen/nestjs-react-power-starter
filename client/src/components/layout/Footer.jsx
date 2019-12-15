@@ -1,5 +1,16 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
-export default function Footer() {
-  return <div>footer</div>;
+export default function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Afgin Ha Demikolo
+      </Link>
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
 }

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import pugs from './pug.reducer';
+import games from './games.reducer';
 import notifications from 'react-redux-notify';
 
 export default combineReducers({
-  pugs,
+  games,
   notifications
 });
