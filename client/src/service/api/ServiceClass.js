@@ -1,14 +1,16 @@
 import axios from 'axios';
 
+const alerter = 
+
 class serviceClass {
   constructor(url) {
-    this.gamesEndpoint = url;
+    this.endpoint = url;
   }
 
-  async fetch(url = '', method = 'get', body, config) {
+  async fetch(url = '/api', method = 'get', body = {}, config = {}) {
     try {
       let result = await axios({
-        url: this.gamesEndpoint + '/' + url,
+        url: this.endpoint + '/' + url,
         headers: config,
         data: body,
         method

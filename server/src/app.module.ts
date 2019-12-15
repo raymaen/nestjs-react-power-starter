@@ -1,29 +1,9 @@
 import { Module } from '@nestjs/common';
-import { PugsModule } from './pugs/pug.module';
-import { MongooseModule } from '@nestjs/mongoose';
-import { APP_INTERCEPTOR, APP_FILTER } from '@nestjs/core';
-import { EasyconfigModule as ConfigModule } from 'nestjs-easyconfig';
-import { LoggingInterceptor } from './middleware/logging.interceptor.ts';
-import { HttpErrorFilter } from './middleware/http-error.filter';
+import { ApiModule } from './api.module';
+import { MongoModule } from './mongo/mongo.module';
+import { UtilModule } from './util.module';
 
 @Module({
-  providers: [
-    {
-      provide: APP_INTERCEPTOR,
-      useClass: LoggingInterceptor,
-    },
-    {
-      provide: APP_FILTER,
-      useClass: HttpErrorFilter,
-    },
-  ],
-  imports: [
-    PugsModule,
-    MongooseModule.forRoot('mongodb://localhost/pugdb'),
-    ConfigModule.register({
-      path: `./config/.env.${process.env.NODE_ENV || 'development'}`,
-      safe: true,
-    }),
-  ],
+  imports: [ApiModule, UtilModule, MongoModule],
 })
 export class AppModule {}

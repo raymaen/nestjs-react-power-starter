@@ -2,7 +2,7 @@ import { ServiceClass } from './ServiceClass';
 
 class pugService extends ServiceClass {
   constructor() {
-    super('/api/pugs');
+    super();
   }
 
   async getPugs() {
