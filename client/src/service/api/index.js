@@ -1,1 +1,1 @@
-export { PugService } from './pugs.service';
+export { GameService } from './game.service';

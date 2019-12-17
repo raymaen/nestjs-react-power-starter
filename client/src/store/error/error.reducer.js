@@ -1,10 +1,10 @@
-import { GET_GAMES } from '../actions/types';
+import { SET_ERROR } from './error.types';
 
-const initialState = [];
+const initialState = null;
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case GET_GAMES:
+    case SET_ERROR:
       return action.payload;
     default:
       return state;

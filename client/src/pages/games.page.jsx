@@ -1,7 +1,7 @@
 import React, { useEffect, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getGames } from '../actions/games.actions';
+import { getGames } from '../store/games/game.actions';
 import AddGamesDialog from '../components/modules/games/AddGamesDialog';
 import GameDataTable from '../components/modules/games/GameDataTable';
 

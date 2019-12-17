@@ -64,6 +64,10 @@ const GamesTable = ({ games }) => {
   const classes = useStyles();
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
+
+  if (!games) {
+    return null;
+  }
   const rows = createData(games);
 
   const handleChangePage = (event, newPage) => {

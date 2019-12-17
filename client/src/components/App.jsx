@@ -1,16 +1,16 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from '../store';
 import PropTypes from 'prop-types';
 import { ThemeProvider, withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Hidden from '@material-ui/core/Hidden';
 import theme from '../theme';
-import Routes from '../routes';
+import Routes from './Routes';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Navigator from './layout/Navigator';
 import Notifications from './common/Notifications';
+import store from '../store/store';
 
 const drawerWidth = 256;
 
@@ -75,7 +75,6 @@ const App = ({ classes }) => {
               <Footer />
             </footer>
           </div>
-          <Notifications />
         </div>
       </ThemeProvider>
     </Provider>

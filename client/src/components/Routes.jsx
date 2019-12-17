@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
-import { BrowserRouter as Routes, Route } from 'react-router-dom';
-import GamesPage from './pages/games.page';
+import { BrowserRouter, Route } from 'react-router-dom';
+import GamesPage from '../pages/games.page';
 
 const styles = theme => ({
   paper: {
@@ -30,9 +30,9 @@ const styles = theme => ({
 
 const Routes = ({ classes }) => (
   <Paper className={classes.paper}>
-    <Routes>
+    <BrowserRouter>
       <Route exact path="/" component={GamesPage} />
-    </Routes>
+    </BrowserRouter>
   </Paper>
 );
 
