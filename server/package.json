@@ -26,6 +26,7 @@
     "@nestjs/platform-express": "^6.0.0",
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
+    "google-play-scraper": "^7.1.1",
     "mongoose": "^5.7.14",
     "nestjs-easyconfig": "^1.6.1",
     "reflect-metadata": "^0.1.12",
